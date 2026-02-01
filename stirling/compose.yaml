@@ -1,0 +1,14 @@
+services:
+  stirling-pdf:
+    image: stirlingtools/stirling-pdf:{TAG:-latest-fat}
+    container_name: ${CNTNR:-stirling-pdf}
+    ports:
+      - '${HOST_PORT:-8080}:8080'
+    volumes:
+      - ${DIR:-/home/administrator/stirling}/trainingData:/usr/share/tessdata # Required for extra OCR languages
+      - ${DIR:-/home/administrator/stirling}/extraConfigs:/configs
+      - ${DIR:-/home/administrator/stirling}/customFiles:/customFiles/
+      - ${DIR:-/home/administrator/stirling}/logs:/logs/
+    environment:
+      - DOCKER_ENABLE_SECURITY=true
+      - LANGS=en_GB
