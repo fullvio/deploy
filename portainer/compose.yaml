@@ -3,7 +3,7 @@ services:
     image: portainer/portainer-ce:${TAG:-latest}
     container_name: ${CNTNR:-portainer}
     ports:
-      - 9443:9443
+      - ${HOST_PORT:-9443}:9443
     volumes:
       - ${DIR:-/home/ubuntu/deploy}/portainer/portainer_data:/data
       - /var/run/docker.sock:/var/run/docker.sock
