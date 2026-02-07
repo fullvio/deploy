@@ -7,6 +7,11 @@ services:
       environment:
        - "TUNNEL_TOKEN=${CLOUDFLARE_TUNNEL_TOKEN}"
       networks:
-        - cloudflared
+        cloudflared:
+        proxy:
+
 networks:
    cloudflared:
+      external: true
+   proxy:
+      external: true
