@@ -1,6 +1,6 @@
 services:
   portainer:
-    image: portainer/portainer-ce:${TAG:-2.38.0}
+    image: portainer/portainer-ce:${TAG:-2.33.6}
     container_name: ${CNTNR:-portainer}
     ports:
       - ${HOST_PORT:-9443}:9443
