@@ -1,6 +1,6 @@
 services:
   portainer:
-    image: portainer/portainer-ce:latest #2.33.1
+    image: portainer/portainer-ce:2.33
     container_name: portainer
     ports:
       - 9443:9443
