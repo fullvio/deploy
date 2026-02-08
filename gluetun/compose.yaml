@@ -8,8 +8,8 @@ services:
     devices:
       - /dev/net/tun:/dev/net/tun
     ports:
-      - 2221:3001 #flws-papa-s
-      - 5681:5680 #neighn-papa-s
+      - 8989:80
+      - 5678:5678
     volumes:
       - ${DIR}/gluetun_data:/gluetun
     environment:
